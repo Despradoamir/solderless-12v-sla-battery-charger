@@ -43,9 +43,9 @@ graph LR
 
 | Qty | Component | Technical Specification | Role in Circuit |
 | :-: | :--- | :--- | :--- |
-| **1** | **Step-Down Transformer** | `EI 57×26` Core, 220V AC Primary, **11V AC** Secondary | Voltage step-down & natural impedance current limiting |
+| **1** | **Step-Down Transformer** | `EI 57×26` Core, 220V AC Primary, **10V AC** Secondary | Voltage step-down & natural impedance current limiting |
 | **4** | **Rectifier Diode** | `1N4007` (Keep full factory lead length) | Full-wave bridge rectification & passive heat dissipation |
-| **1** | **Electrolytic Capacitor** | `1000µF / 25V` | Ripple filtering & stabilizing open-circuit float voltage |
+| **1** | **Electrolytic Capacitor** | `1000µF or 470µF / 25V` | Ripple filtering & stabilizing open-circuit float voltage |
 | **1** | **Thermal Fuse** | `105°C – 115°C` (2A, 250V AC) | Primary AC mains disconnect upon core overheating |
 | **-** | **Hardware & Insulation** | Metal crimp ferrules, fiberglass sleeving, Red/Black clips | Solderless mechanical joints & high-voltage insulation |
 
