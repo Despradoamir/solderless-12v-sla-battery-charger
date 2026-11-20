@@ -1,6 +1,6 @@
 # Minimalist Solderless 12V SLA Battery Charger (13.8V Float-Locked)
 
-> **License:** `MIT` | **Category:** `Analog Power Hardware` | **Assembly:** `100% Solderless` | **Output:** `13.9V DC Float`
+> **License:** `MIT` | **Category:** `Analog Power Hardware` | **Assembly:** `100% Solderless` | **Output:** `13.8V DC Float`
 
 
 
