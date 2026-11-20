@@ -29,7 +29,7 @@ This open-hardware repository presents an ultra-reliable, minimalist, and **100%
 ```mermaid
 graph LR
     AC[220V AC Mains] --> TF[Thermal Fuse 110°C<br/>Mounted on Core]
-    TF --> TR[Step-Down Transformer<br/>EI 57x26 Core<br/>220V -> 10V AC]
+    TF --> TR[Step-Down Transformer<br/>EI 57x26 Core<br/>220V -> 10V and 20v AC orginal yaxun1502dd]
     TR -->|10V AC| BR[Bridge Rectifier<br/>4x 1N4007 Full-Length Leads<br/>Crimp Connections]
     BR -->|+ / -| CAP[Filter Capacitor<br/>1000uF / 25V]
     CAP -->|+13.8V DC| POS[Red Alligator Clip +]
@@ -72,7 +72,7 @@ graph LR
 **No.** A standard 12V AC transformer typically outputs 13V–14V AC under light load, which rectifies to **17V–18.5V DC** across the filter capacitor. Without an active regulator, this will overcharge and damage a 12V SLA battery. Using an **10V AC** tap (or unwinding a few turns from a 12V secondary) is critical to lock the output at **13.8V DC**.
 
 ### Can this charger be left connected permanently (float/trickle mode)?
-**Yes.** Because the open-circuit voltage is locked at **13.8V DC** (within the standard 13.5V–13.8V/13.9V standby float range for 12V VRLA/SLA batteries), current naturally tapers off to a few milliamps once the battery reaches full charge.
+**Yes.** Because the open-circuit voltage is **13.8V DC** under light load , without load 14.4v DC (within the standard 13.5V–13.8V/13.9V standby float range for 12V VRLA/SLA batteries), current naturally tapers off to a few milliamps once the battery reaches full charge.
 
 ### Can I charge a large car battery (e.g., 55Ah or 60Ah) with this circuit?
 This specific BOM (`EI 57×26` core and `1N4007` 1A diodes) is optimized for **4.5Ah to 12Ah** SLA batteries (UPS, alarm panels, emergency lights, motorcycles). While it can maintain a larger battery, charging a deeply discharged car battery from empty would overload the 1A diodes and small core.
