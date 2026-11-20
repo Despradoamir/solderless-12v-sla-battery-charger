@@ -1,9 +1,7 @@
 # Minimalist Solderless 12V SLA Battery Charger (13.8V Float-Locked)
 
-![License: MIT](https://shields.io)
-![Hardware](https://shields.io)
-![Assembly](https://shields.io)
-![Output](https://shields.io)
+> **License:** `MIT` | **Category:** `Analog Power Hardware` | **Assembly:** `100% Solderless` | **Output:** `13.9V DC Float`
+
 
 
 **Designed & Engineered by:** Amir Husseinzadeh  
