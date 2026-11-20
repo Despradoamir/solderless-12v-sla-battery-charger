@@ -68,8 +68,8 @@ graph LR
 
 ## ❓ Frequently Asked Questions (FAQ)
 
-### Can I use a standard 12V AC transformer instead of 11V AC?
-**No.** A standard 12V AC transformer typically outputs 13V–14V AC under light load, which rectifies to **17V–18.5V DC** across the filter capacitor. Without an active regulator, this will overcharge and damage a 12V SLA battery. Using an **11V AC** tap (or unwinding a few turns from a 12V secondary) is critical to lock the output at **13.8V DC**.
+### Can I use a standard 12V AC transformer instead of 10V AC?
+**No.** A standard 12V AC transformer typically outputs 13V–14V AC under light load, which rectifies to **17V–18.5V DC** across the filter capacitor. Without an active regulator, this will overcharge and damage a 12V SLA battery. Using an **10V AC** tap (or unwinding a few turns from a 12V secondary) is critical to lock the output at **13.8V DC**.
 
 ### Can this charger be left connected permanently (float/trickle mode)?
 **Yes.** Because the open-circuit voltage is locked at **13.8V DC** (within the standard 13.5V–13.8V/13.9V standby float range for 12V VRLA/SLA batteries), current naturally tapers off to a few milliamps once the battery reaches full charge.
