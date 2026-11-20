@@ -1,4 +1,4 @@
-# Minimalist Solderless 12V SLA Battery Charger (13.8V Float-Locked)
+# Minimalist Solderless 12V_5Ah-to_12Ah SLA Battery Charger (13.8V Float-Locked)
 
 ![Project Badges](badges.svg)
 
