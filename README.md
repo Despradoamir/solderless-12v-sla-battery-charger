@@ -60,7 +60,7 @@ graph LR
    * **Do not trim** the leads of the four `1N4007` diodes; their full length is required for passive cooling.
    * Twist and crimp them into a standard bridge configuration using metal ferrules.
 3. **Capacitor & Output Leads:**
-   * Crimp the `470µF or 1000µF / 25V` capacitor across the `+` and `-` bridge junctions (observing polarity), then crimp the output alligator clip wires.
+   * Crimp the `470µF or 2200hµF / 25V` capacitor across the `+` and `-` bridge junctions (observing polarity), then crimp the output alligator clip wires.
 4. **Pre-Use Verification:**
    * Before connecting a battery, measure the open-circuit output voltage across the clips. It should read between **13.7V and 14.0V DC**.
 
