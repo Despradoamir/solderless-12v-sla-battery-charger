@@ -1,4 +1,4 @@
-# Minimalist Solderless 12V SLA Battery Charger (13.9V Float-Locked)
+# Minimalist Solderless 12V SLA Battery Charger (13.8V Float-Locked)
 
 ![License: MIT](https://shields.io)
 ![Hardware](https://shields.io)
