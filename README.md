@@ -24,9 +24,10 @@ This open-hardware repository presents an ultra-reliable, minimalist, and **100%
 ## 🔌 Circuit Schematic & Architecture
 
 ![Circuit Schematic](schematic.svg)
+```mermaid
 flowchart TD
     A[220V AC Mains] --> B[110°C Thermal Fuse on Core]
-    B --> C["Yaxun 1502DD Transformer<br/>(10V AC Output)<br/>⚠️ Do NOT use 20V AC"]
+    B --> C["Yaxun 1502DD Transformer<br/>(10V AC Output)<br/>⚠ Do NOT use 20V AC"]
     C --> D["Bridge Rectifier<br/>4x 1N5408 (Long Leads)"]
     D -->|"+"| E["Filter Capacitor 1000µF / 25V"]
     D -->|"-"| F["Negative Rail (-)"]
@@ -36,7 +37,7 @@ flowchart TD
     F --> I["Alligator Clip (-)"]
     H --> J["12V UPS Battery<br/>(5Ah to 12Ah)"]
     I --> J
-
+```
 
 
 ```
