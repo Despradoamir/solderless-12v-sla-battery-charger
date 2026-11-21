@@ -156,6 +156,7 @@ Under continuous high-current charging, low-cost rectifier diodes run hot, which
 | Float voltage stability | Good (transformer-dependent) | Excellent | N/A | Excellent |
 | Repairability | **Trivial** | Moderate | Moderate | Low |
 | Best use case | **Standby / maintainer** | General charging | Reviving dead batteries | Plug-and-play |
+___
 
 **Who this project is for:** makers with a 5–12Ah SLA battery that sits idle, who want to keep it alive permanently without overcharging, and who want to build it in under an hour with no soldering iron.
 
@@ -193,6 +194,18 @@ That is a defensible, honest niche. A critic can argue about features; they cann
 This circuit connects directly to **220V AC mains**. Ensure all primary connections are properly insulated with fiberglass sleeving and housed inside a non-conductive enclosure with ventilation slots before powering on.
 
 ---
+## Discoverability & Community
+
+If you build this project, please consider:
+- ⭐ Starring this repository (it helps others find it).
+- 🔗 Linking back from your build log or blog.
+- 🛠️ Sharing your build in r/DIYElectronics, r/AskElectronics, EEVblog, or Hackaday.io.
+
+This project was designed for makers in inflation-hit economies — where a commercial charger can cost more than the battery itself. If it saves you one battery, it has done its job.
+
+**Search terms this project is designed to answer:**
+`solderless 12V SLA charger`, `UPS battery maintainer`, `lead-acid float charger DIY`, `13.8V battery charger no PCB`, `cheap SLA battery maintainer`, `Yaxun 1502DD Plus charger`, `minimalist battery charger`.
+___
 
 ## 📄 License & Attribution
 This hardware design is released under the **MIT License** (see the `LICENSE` file for details).  
