@@ -64,7 +64,7 @@ flowchart TD
 | :-: | :--- | :--- | :--- |
 | **1** | **Step-Down Transformer** | `EI 57×26` Core, 220V AC Primary, **10V and 20V AC** Secondary | Voltage step-down & natural impedance current limiting |
 | **4** | **Rectifier Diode** | `1N5408` (Keep full factory lead length) | Full-wave bridge rectification & passive heat dissipation |
-| **1** | **Electrolytic Capacitor** | `1000µF or 470µF / 25V` | Ripple filtering & stabilizing open-circuit float voltage |
+| **1** | **Electrolytic Capacitor** | `1000µF or 470µF / 25V` | Output noise suppression & EMI reduction |
 | **1** | **Thermal Fuse** | `105°C – 115°C` (2A, 250V AC) | Primary AC mains disconnect upon core overheating 
 and for dc out+ to loader car fuse 3 or 5amp fuse for more safety 
 |
