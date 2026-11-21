@@ -1,12 +1,15 @@
-Minimalist Solderless 12V SLA & UPS Battery Charger (5Ah–12Ah, 13.8V Float)
+# Solderless 12V SLA / UPS Battery Maintainer (5–12Ah, 13.8V Float)
 
+**A 100% solderless, ultra-minimal, ~$3–5 12V SLA battery maintainer. No PCB. No regulator. No soldering iron. Just a $2 transformer, four diodes, and physics.**
 
-![Project Badges](badges.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Solderless](https://img.shields.io/badge/assembly-solderless-brightgreen)
+![Cost](https://img.shields.io/badge/BOM-~%243--5-blue)
+![Battery](https://img.shields.io/badge/battery-5--12Ah%20SLA-orange)
 
+> **Keywords:** solderless battery charger, 12V SLA maintainer, UPS battery charger, lead-acid float charger, 13.8V float, no-PCB electronics, minimalist hardware, low-cost DIY charger, Yaxun 1502DD Plus, inflation-friendly electronics.
 
-
-**Designed & Engineered by:** Amir Husseinzadeh  
-**Contact:** [t.me/AmirHusseinzadeh](https://t.me)
+---
 
 ---
 
