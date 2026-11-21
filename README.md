@@ -73,6 +73,25 @@ and for dc out+ to loader car fuse 3 or 5amp fuse for more safety
    * Before connecting a battery, measure the open-circuit output voltage across the clips. It should read between **13.7V and 14.0V DC**.
 
 ---
+Design Notes!!!
+
+Capacitor C1 (1000µF) — Noise Reduction, Not Ripple Smoothing
+
+The 1000µF capacitor on the output is not a smoothing capacitor for ripple. Its sole purpose is to suppress high-frequency switching noise from the rectifier diodes and reduce EMI on the output leads.
+
+Ripple smoothing in this topology is handled by the battery itself. A typical 5–12Ah SLA battery presents an effective capacitance of hundreds of farads at 100/120Hz, so terminal ripple under charge is negligible regardless of C1. If ripple smoothing were the goal, C1 would need to be at least 4700–6800µF — which would add bulk, inrush current, and cost without any practical benefit. The 1000µF value is deliberate: enough for noise, small enough to stay minimal.
+
+Transformer — The Critical Component
+
+In this open-loop, regulator-free design, the transformer is not a secondary part — it is part of the circuit. Output voltage is determined directly by:
+
+Vout ≈ Vsecondary(peak) − diode drops − transformer regulation drop − ripple
+
+There is no active regulation to correct for a poor transformer. This is why the design uses a Yaxun 1502DD Plus (EI 57×26 core) as the reference transformer. It offers low regulation drop under load, adequate copper, and stable behavior — and it is available worldwide for approximately $2, which is central to the project's low-cost claim.
+
+Reproducibility note: Any EI 57×26 transformer with good regulation (low DC resistance in both windings, minimal voltage drop at rated load) will produce the same result. Low-quality transformers with undersized copper and 20–30% regulation will not hold 13.8V float — they will either overshoot or sag below the safe float window. If you substitute the transformer, verify its regulation under load before trusting the output voltage.
+
+Recommended check for builders: Measure the secondary voltage unloaded, then again at ~2A load. A well-made transformer will drop only a few volts. A poor one will drop significantly more and should be rejected.
 
 ## ❓ Frequently Asked Questions (FAQ)
 
