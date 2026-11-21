@@ -21,7 +21,18 @@ This open-hardware repository presents an ultra-reliable, minimalist, and **100%
 * **Zero Solder Joints:** 100% mechanical crimp connections eliminate thermal solder-joint failure under continuous operation.
 * **Passive Lead Heatsinking:** Full-length factory leads on `1N5408` diodes act simultaneously as passive heatsinks and secondary fusible links.
 * **Primary Thermal Protection:** A `110°C` thermal fuse mounted flush against the transformer core cuts off 220V AC mains in case of prolonged short circuits or core overheating and 3 or 5amp car fuse on out+ to load
+## What This Project Is (and Is Not)
 
+**This is a maintainer, not a fast charger.** It keeps a healthy 5–12Ah SLA/UPS/alarm battery topped up at a safe 13.8V float — indefinitely — with no active regulation, no PCB, and no soldering.
+
+- ✅ **Is:** the cheapest, simplest, solderless way to keep a standby SLA battery alive for years.
+- ✅ **Is:** fully repairable with crimp connectors and a screwdriver.
+- ✅ **Is:** reproducible worldwide for ~$3–5 in parts.
+- ❌ **Is not:** a fast charger for a deeply discharged battery.
+- ❌ **Is not:** a desulfator or battery reviver.
+- ❌ **Is not:** a multi-stage (bulk → absorption → float) smart charger.
+
+If you need any of the "is not" features, use a smart charger (NE555/LM317) or a desulfator instead. This project deliberately does **one thing extremely well**.
 ---
 
 ## 🔌 Circuit Schematic & Architecture
@@ -133,25 +144,24 @@ Under continuous high-current charging, low-cost rectifier diodes run hot, which
 
 ---
 
-Feature This Project NE555 / LM317 Smart Charger Desulfator (Pulse) Commercial Float Charger
-|---|---|
-Approx. cost ~$3–5 $5–10 $8–15 $15–40
-|---|---|
-Soldering required No Yes Yes N/A
-|---|---|
-Active regulation No (passive float) Yes No Yes
-|---|---|
-Auto cutoff / multi-stage No Yes No Yes
-|---|---|
-Desulfation / recovery No No Yes Rarely
-|---|---|
-Float voltage stability Good (transformer-dependent) Excellent N/A Excellent
-|---|---|
-Repairability Trivial (crimp + screws) Moderate Moderate Low
-|---|---|
-Best use case Standby / maintainer General charging Reviving dead batteries Plug-and-play
-How to read this table
+## Comparison with Other 12V SLA Charger Projects
 
+| Feature | **This Project** | NE555 / LM317 Smart Charger | Desulfator (Pulse) | Commercial Float Charger |
+|---|---|---|---|---|
+| Approx. cost | **~$3–5** | $5–10 | $8–15 | $15–40 |
+| Soldering required | **No** | Yes | Yes | N/A |
+| Active regulation | No (passive float) | Yes | No | Yes |
+| Auto cutoff / multi-stage | No | Yes | No | Yes |
+| Desulfation / recovery | No | No | Yes | Rarely |
+| Float voltage stability | Good (transformer-dependent) | Excellent | N/A | Excellent |
+| Repairability | **Trivial** | Moderate | Moderate | Low |
+| Best use case | **Standby / maintainer** | General charging | Reviving dead batteries | Plug-and-play |
+
+**Who this project is for:** makers with a 5–12Ah SLA battery that sits idle, who want to keep it alive permanently without overcharging, and who want to build it in under an hour with no soldering iron.
+
+**Who this project is not for:** anyone who needs to revive a dead battery, fast-charge a discharged one, or run a multi-stage charging cycle.
+
+**Why this positioning matters:** most online projects try to be "the best charger" and end up mediocre at everything. This project does one thing extremely well — and documents its trade-offs honestly.
 · Against smart chargers (NE555 / LM317): You win on cost, simplicity, and solderless assembly. You lose on active regulation and multi-stage charging. This is not a flaw — it is a deliberate trade-off. A 13.8V float design does not need auto-cutoff because the battery never reaches gassing voltage. But it also cannot fast-charge a deeply discharged battery safely.
 · Against desulfators: They solve a different problem. A desulfator revives a sulfated battery; this project maintains a healthy one. If your battery is already dead, use a desulfator first — then use this charger to keep it alive.
 · Against commercial float chargers: You match their core function (13.8V float) at one-fifth to one-tenth the price, with the added benefit that every part is user-serviceable.
