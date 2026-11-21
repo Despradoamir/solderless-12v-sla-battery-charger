@@ -156,7 +156,8 @@ Under continuous high-current charging, low-cost rectifier diodes run hot, which
 | Float voltage stability | Good (transformer-dependent) | Excellent | N/A | Excellent |
 | Repairability | **Trivial** | Moderate | Moderate | Low |
 | Best use case | **Standby / maintainer** | General charging | Reviving dead batteries | Plug-and-play |
-___
+
+---
 
 **Who this project is for:** makers with a 5–12Ah SLA battery that sits idle, who want to keep it alive permanently without overcharging, and who want to build it in under an hour with no soldering iron.
 
