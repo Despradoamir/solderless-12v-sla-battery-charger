@@ -130,6 +130,52 @@ Under continuous high-current charging, low-cost rectifier diodes run hot, which
 
 ---
 
+Feature This Project NE555 / LM317 Smart Charger Desulfator (Pulse) Commercial Float Charger
+|---|---|
+Approx. cost ~$3–5 $5–10 $8–15 $15–40
+|---|---|
+Soldering required No Yes Yes N/A
+|---|---|
+Active regulation No (passive float) Yes No Yes
+|---|---|
+Auto cutoff / multi-stage No Yes No Yes
+|---|---|
+Desulfation / recovery No No Yes Rarely
+|---|---|
+Float voltage stability Good (transformer-dependent) Excellent N/A Excellent
+|---|---|
+Repairability Trivial (crimp + screws) Moderate Moderate Low
+|---|---|
+Best use case Standby / maintainer General charging Reviving dead batteries Plug-and-play
+How to read this table
+
+· Against smart chargers (NE555 / LM317): You win on cost, simplicity, and solderless assembly. You lose on active regulation and multi-stage charging. This is not a flaw — it is a deliberate trade-off. A 13.8V float design does not need auto-cutoff because the battery never reaches gassing voltage. But it also cannot fast-charge a deeply discharged battery safely.
+· Against desulfators: They solve a different problem. A desulfator revives a sulfated battery; this project maintains a healthy one. If your battery is already dead, use a desulfator first — then use this charger to keep it alive.
+· Against commercial float chargers: You match their core function (13.8V float) at one-fifth to one-tenth the price, with the added benefit that every part is user-serviceable.
+
+Who this project is for
+
+· You have a 5–12Ah SLA/UPS/alarm battery that sits idle for long periods.
+· You want to keep it topped up permanently without overcharging it.
+· You want to build it in under an hour with no soldering iron, no PCB, and no specialized tools.
+· You accept that this is a maintainer, not a recovery charger.
+
+Who this project is not for
+
+· You need to charge a completely dead battery quickly and safely.
+· You need desulfation or recovery of an aged battery.
+· You need multi-stage charging (bulk → absorption → float) with automatic transitions.
+
+If any of the above applies, a smart charger or a desulfator is the correct tool. This project is intentionally minimal, and minimalism means knowing exactly what it does — and what it does not.
+
+---
+
+Why this positioning matters
+
+Most online projects try to be "the best charger" and end up being mediocre at everything. This project does one thing extremely well: it keeps a healthy 5–12Ah SLA battery at a safe float voltage, forever, for the price of a cup of coffee — and anyone can build it without a soldering iron.
+
+That is a defensible, honest niche. A critic can argue about features; they cannot argue with cost, simplicity, and reproducibility when the design is documented this clearly.
+
 ## ⚠️ Safety Disclaimer
 This circuit connects directly to **220V AC mains**. Ensure all primary connections are properly insulated with fiberglass sleeving and housed inside a non-conductive enclosure with ventilation slots before powering on.
 
