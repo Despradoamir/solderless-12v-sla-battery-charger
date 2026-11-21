@@ -47,7 +47,9 @@ graph LR
 | **1** | **Step-Down Transformer** | `EI 57×26` Core, 220V AC Primary, **10V and 20V AC** Secondary | Voltage step-down & natural impedance current limiting |
 | **4** | **Rectifier Diode** | `1N5408` (Keep full factory lead length) | Full-wave bridge rectification & passive heat dissipation |
 | **1** | **Electrolytic Capacitor** | `1000µF or 470µF / 25V` | Ripple filtering & stabilizing open-circuit float voltage |
-| **1** | **Thermal Fuse** | `105°C – 115°C` (2A, 250V AC) | Primary AC mains disconnect upon core overheating |
+| **1** | **Thermal Fuse** | `105°C – 115°C` (2A, 250V AC) | Primary AC mains disconnect upon core overheating 
+and for dc out+ to loader car fuse 3 or 5amp fuse for more safety 
+|
 | **-** | **Hardware & Insulation** | Metal crimp ferrules, fiberglass sleeving, Red/Black clips | Solderless mechanical joints & high-voltage insulation |
 
 ---
@@ -77,7 +79,7 @@ graph LR
 **Yes.** Because the open-circuit voltage is **13.8V DC** under light load , without load 14.4v DC (within the standard 13.5V–13.8V/13.9V standby float range for 12V VRLA/SLA batteries), current naturally tapers off to a few milliamps once the battery reaches full charge.
 
 ### Can I charge a large car battery (e.g., 55Ah or 60Ah) with this circuit?
-This specific BOM (`EI 57×26` core and `1N4007` 1A diodes) is optimized for **4.5Ah to 12Ah** SLA batteries (UPS, alarm panels, emergency lights, motorcycles). While it can maintain a larger battery, charging a deeply discharged car battery from empty would overload the 1A diodes and small core.
+This specific BOM (`EI 57×26` core and `1N5408` 3A diodes) is optimized for **4.5Ah to 12Ah** SLA batteries (UPS, alarm panels, emergency lights, motorcycles). While it can maintain a larger battery, charging a deeply discharged car battery from empty would overload the 3A diodes and small core.
 
 ### Why are there no solder joints in this design?
 Under continuous high-current charging, low-cost rectifier diodes run hot, which frequently causes standard tin-lead solder joints to crack or melt over time. Mechanical crimp ferrules combined with full-length diode leads eliminate this failure mode entirely.
