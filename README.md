@@ -14,9 +14,9 @@ Minimalist Solderless 12V SLA & UPS Battery Charger (5Ah–12Ah, 13.8V Float)
 This open-hardware repository presents an ultra-reliable, minimalist, and **100% solderless 12V Sealed Lead-Acid (SLA) battery charger**. By utilizing natural transformer core impedance matching and selecting a precise **10V AC** secondary winding, the open-circuit DC voltage locks naturally at **13.8V DC**—the exact safe float-charge threshold for 12V SLA batteries—eliminating the need for active voltage regulators (`LM317`), PCBs, or cutoff relays.
 
 ### ✨ Key Engineering Highlights
-* **Zero-Regulator Float Lock:** $V_{DC} \approx (10\20 text{V} \times \sqrt{2}) - 1.4\text{V} \approx 13.8\text{V}$ under no-load conditions, preventing battery overcharging and electrolyte dry-out.
+* **Zero-Regulator Float Lock:** $V_{DC} \approx (10\20 text{V} \times \sqrt{2}) - 1.4\text{V} \approx 14.4\text{V}$ under no-load and 13.8 under load conditions, preventing battery overcharging and electrolyte dry-out.
 * **Zero Solder Joints:** 100% mechanical crimp connections eliminate thermal solder-joint failure under continuous operation.
-* **Passive Lead Heatsinking:** Full-length factory leads on `1N4007` diodes act simultaneously as passive heatsinks and secondary fusible links.
+* **Passive Lead Heatsinking:** Full-length factory leads on `1N5408` diodes act simultaneously as passive heatsinks and secondary fusible links.
 * **Primary Thermal Protection:** A `110°C` thermal fuse mounted flush against the transformer core cuts off 220V AC mains in case of prolonged short circuits or core overheating and 3 or 5amp car fuse on out+ to load
 
 ---
