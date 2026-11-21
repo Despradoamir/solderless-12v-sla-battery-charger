@@ -25,16 +25,23 @@ This open-hardware repository presents an ultra-reliable, minimalist, and **100%
 
 ![Circuit Schematic](schematic.svg)
 
-### Interactive Wiring Flow (Auto-Rendered by GitHub)
-
+### Interactive Wiring Flow (Auto-Rendered)
 ```mermaid
-graph LR
-    AC[220V AC Mains] --> TF[Thermal Fuse 110°C<br/>Mounted on Core]
-    TF --> TR[Step-Down Transformer<br/>EI 57x26 Core<br/>220V -> 10V and 20v AC orginal yaxun1502dd]
-    TR -->|10V AC| BR[Bridge Rectifier<br/>4x 1N4007 Full-Length Leads<br/>Crimp Connections]
-    BR -->|+ / -| CAP[Filter Capacitor<br/>1000uF / 25V]
-    CAP -->|+13.8V DC| POS[Red Alligator Clip +]
-    CAP -->|GND| NEG[Black Alligator Clip -]
+flowchart TD
+    A[220V AC Mains] --> B[110°C Thermal Fuse on Core]
+    B --> C["Yaxun 1502DD Transformer<br/>(10V AC Output)<br/>⚠️ Do NOT use 20V AC"]
+    C --> D["Bridge Rectifier<br/>4x 1N5408 (Long Leads)"]
+    D -->|+| E[Filter Capacitor 1000µF / 25V]
+    D |-| F[Negative Rail -]
+    E --- F
+    E --> G[3A/5A Automotive Fuse]
+    G --> H[Alligator Clip +]
+    F --> I[Alligator Clip -]
+    H --> J["12V UPS Battery<br/>(5Ah to 12Ah)"]
+    I --> J
+```
+
+
 ```
 <img width="1408" height="768" alt="assembly-layout png" src="https://github.com/user-attachments/assets/7f6a0f81-26df-4916-909e-ea9a91d92928" />
 
