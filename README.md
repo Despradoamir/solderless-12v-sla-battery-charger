@@ -41,7 +41,6 @@ flowchart TD
 
 
 ```
-<img width="1408" height="768" alt="assembly-layout png" src="https://github.com/user-attachments/assets/7f6a0f81-26df-4916-909e-ea9a91d92928" />
 
 ---
 
