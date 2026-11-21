@@ -55,7 +55,11 @@ flowchart TD
 and for dc out+ to loader car fuse 3 or 5amp fuse for more safety 
 |
 | **-** | **Hardware & Insulation** | Metal crimp ferrules, fiberglass sleeving, Red/Black clips | Solderless mechanical joints & high-voltage insulation |
-
+1000µF / 25V electrolytic — Output noise suppression & EMI reduction.
+Note: this capacitor is NOT for ripple smoothing. Ripple is handled by the
+battery itself (a 5–12Ah SLA behaves as hundreds of farads at 100/120Hz).
+1000µF is deliberate: enough for noise, small enough to stay minimal.
+Sizing it for ripple would require 4700–6800µF with no practical benefit.
 ---
 
 ## 🔧 Step-by-Step Assembly Guidelines
@@ -96,7 +100,24 @@ Recommended check for builders: Measure the secondary voltage unloaded, then aga
 ## ❓ Frequently Asked Questions (FAQ)
 
 ### Can I use a standard 12V AC transformer instead of 10V AC?
-**No.** A standard 12V AC transformer typically outputs 13V–14V AC under light load, which rectifies to **17V–18.5V DC** across the filter capacitor. Without an active regulator, this will overcharge and damage a 12V SLA battery. Using an **10V AC** tap (or unwinding a few turns from a 12V secondary) is critical to lock the output at **13.8V DC**.
+##NO##
+ Why does transformer quality matter so much?
+
+In this design there is no voltage regulator. Output voltage is determined
+directly by:
+
+    Vout ≈ Vsecondary(peak) − diode drops − transformer regulation drop
+
+A low-quality transformer with undersized copper and 20–30% regulation will
+NOT hold 13.8V float — it will either overshoot or sag below the safe float
+window. The reference transformer for this project is the **Yaxun 1502DD Plus**
+(EI 57×26 core), chosen for its low regulation drop under load. It is
+available worldwide for approximately **$2**, which is central to this
+project's low-cost claim.
+
+**If you substitute the transformer:** measure the secondary voltage unloaded,
+then again at ~2A load. A well-made transformer drops only a few volts.
+A poor one drops significantly more and should be rejected before use.
 
 ### Can this charger be left connected permanently (float/trickle mode)?
 **Yes.** Because the open-circuit voltage is **13.8V DC** under light load , without load 14.4v DC (within the standard 13.5V–13.8V/13.9V standby float range for 12V VRLA/SLA batteries), current naturally tapers off to a few milliamps once the battery reaches full charge.
