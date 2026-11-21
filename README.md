@@ -17,7 +17,7 @@ This open-hardware repository presents an ultra-reliable, minimalist, and **100%
 * **Zero-Regulator Float Lock:** $V_{DC} \approx (10\20 text{V} \times \sqrt{2}) - 1.4\text{V} \approx 13.8\text{V}$ under no-load conditions, preventing battery overcharging and electrolyte dry-out.
 * **Zero Solder Joints:** 100% mechanical crimp connections eliminate thermal solder-joint failure under continuous operation.
 * **Passive Lead Heatsinking:** Full-length factory leads on `1N4007` diodes act simultaneously as passive heatsinks and secondary fusible links.
-* **Primary Thermal Protection:** A `110°C` thermal fuse mounted flush against the transformer core cuts off 220V AC mains in case of prolonged short circuits or core overheating.
+* **Primary Thermal Protection:** A `110°C` thermal fuse mounted flush against the transformer core cuts off 220V AC mains in case of prolonged short circuits or core overheating and 3 or 5amp car fuse on out+ to load
 
 ---
 
@@ -59,10 +59,10 @@ graph LR
    * Crimp the 220V AC line through the fuse to the transformer primary lead. **Do not solder** the thermal fuse (soldering iron heat will trip it).
    * Insulate all 220V joints with fiberglass sleeving.
 2. **Solderless Bridge Rectifier (10V AC Side):**
-   * **Do not trim** the leads of the four `1N4007` diodes; their full length is required for passive cooling.
+   * **Do not trim** the leads of the four `1N5408` diodes; their full length is required for passive cooling.
    * Twist and crimp them into a standard bridge configuration using metal ferrules.
 3. **Capacitor & Output Leads:**
-   * Crimp the `470µF or 2200hµF / 25V` capacitor across the `+` and `-` bridge junctions (observing polarity), then crimp the output alligator clip wires.
+   * Crimp the `470µF or 1000µF / 25V` capacitor across the `+` and `-` bridge junctions (observing polarity), then crimp the output alligator clip wires.
 4. **Pre-Use Verification:**
    * Before connecting a battery, measure the open-circuit output voltage across the clips. It should read between **13.7V and 14.0V DC**.
 
